@@ -1,0 +1,367 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-primary {
+  color: hsl(0, 0%, 100%);
+}
+
+.text-accent-100 {
+  color: hsl(0, 0%, 55%);
+}
+
+.text-secondary {
+  color: hsl(0, 0%, 0%);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.bg-secondary {
+  background-color: hsl(0, 0%, 0%);
+}
+
+.ff-primary {
+  font-family: "Alata", sans-serif;
+}
+
+.ff-secondary {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.fs-nav-menu {
+  font-size: 1rem;
+}
+
+.fs-sub-heading {
+  font-size: 2rem;
+}
+
+.fs-main-heading {
+  font-size: 2.5rem;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Alata", sans-serif;
+}
+
+.button {
+  font-family: "Josefin Sans", sans-serif;
+  border: 2px solid hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  width: max-content;
+  justify-self: center;
+  transition: all ease-in-out 0.5s;
+}
+.button:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  column-gap: 1em;
+  row-gap: 1em;
+  align-items: center;
+  padding: 0;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 25%;
+  background-color: hsl(0, 0%, 100%);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.nav-links li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.social-links li {
+  position: relative;
+  cursor: pointer;
+}
+.social-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.social-links li:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.creations-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1em;
+  place-items: center;
+}
+
+@media (min-width: 50em) {
+  body {
+    font-size: 1.5rem;
+  }
+  .fs-nav-menu {
+    font-size: 1rem;
+  }
+  .fs-sub-heading {
+    font-size: 2.5rem;
+  }
+  .fs-main-heading {
+    font-size: 3rem;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .nav-links-wrapper {
+    position: relative;
+  }
+  .nav-links {
+    display: flex;
+    column-gap: 1em;
+  }
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 50em) {
+  .nav-links-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(0, 0%, 0%);
+    font-family: "Josefin Sans", sans-serif;
+    color: hsl(0, 0%, 100%);
+    padding: 0 2rem;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-out;
+    display: grid;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  .nav-links-wrapper.open {
+    transform: scaleX(1);
+  }
+  .nav-links-wrapper.open div {
+    display: flex;
+    height: max-content;
+  }
+  .nav-links-wrapper.open .nav-links {
+    display: flex;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .nav-links-wrapper.open .nav-links li {
+    width: 100%;
+  }
+}
+header {
+  margin-bottom: 5rem;
+}
+header .container {
+  background: url("../images/mobile/image-hero.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 1.5em;
+}
+header .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5em;
+  margin-bottom: 10em;
+}
+header .nav-menu .logo {
+  z-index: 1;
+  position: relative;
+}
+header .nav-menu-btn {
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (min-width: 50em) {
+  header .nav-menu-btn {
+    display: none;
+  }
+  header .nav-menu .nav-links {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 50em) {
+  header .nav-menu .nav-links {
+    display: none;
+  }
+}
+header .main-heading {
+  display: grid;
+  place-content: center;
+  border: 2px solid;
+  padding: 1em;
+}
+@media screen and (min-width: 50em) {
+  header .main-heading {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 60em) {
+  header .main-heading {
+    max-width: 60%;
+  }
+}
+
+.main-body .container {
+  padding: 0 1.5em;
+  margin-bottom: 5rem;
+}
+.main-body .container .card {
+  margin-bottom: 10rem;
+}
+.main-body .container .card--img {
+  margin-bottom: 3em;
+}
+@media screen and (min-width: 50em) {
+  .main-body .container .card--img {
+    display: grid;
+    place-content: center;
+  }
+}
+.main-body .container .card--text h2 {
+  margin-bottom: 2em;
+}
+.main-body .container .creations div {
+  display: grid;
+  gap: 1em;
+  margin-bottom: 3em;
+}
+
+footer .container {
+  padding: 2.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .container .nav-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer .container p {
+  font-size: 1rem;
+}

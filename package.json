@@ -1,0 +1,15 @@
+{
+  "name": "loopstudios-landing-page",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "sass assets/sass:assets/css --watch --poll --trace --no-source-map "
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  }
+}
