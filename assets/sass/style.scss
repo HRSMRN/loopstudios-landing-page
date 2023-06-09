@@ -9,6 +9,12 @@ header {
     background-size: cover;
     height: 100vh;
     padding: 0 1.5em;
+
+    @media screen and (min-width: 60em) {
+      background: url("../images/desktop/image-hero.jpg") no-repeat center;
+      height: 50vh;
+      padding: 0 10%;
+    }
   }
 
   .nav-menu {
@@ -16,6 +22,10 @@ header {
     justify-content: space-between;
     padding-top: 1.5em;
     margin-bottom: 10em;
+
+    @media screen and (min-width: 60em) {
+      margin-bottom: 5em;
+    }
 
     .logo {
       z-index: 1;
@@ -31,9 +41,6 @@ header {
     @media screen and (min-width: 50em) {
       &-btn {
         display: none;
-      }
-      .nav-links {
-        flex-direction: row;
       }
     }
 
@@ -55,7 +62,7 @@ header {
     }
 
     @media screen and (min-width: 60em) {
-      max-width: 60%;
+      max-width: 50%;
     }
   }
 }
@@ -65,8 +72,12 @@ header {
     padding: 0 1.5em;
     margin-bottom: $section-margin;
 
+    @media screen and (min-width: 60em) {
+      padding: 0 10%;
+    }
+
     .card {
-      margin-bottom: 10rem;
+      margin-bottom: 8em;
 
       &--img {
         margin-bottom: 3em;
@@ -75,17 +86,30 @@ header {
           display: grid;
           place-content: center;
         }
+
+        // @media screen and (min-width: 60em) {
+        //   place-content: initial;
+        // }
       }
 
       &--text {
         h2 {
           margin-bottom: 2em;
         }
+
+        @media screen and (min-width: 60em) {
+          & {
+          }
+
+          & h2 {
+            margin-bottom: 0.5em;
+          }
+        }
       }
     }
 
     .creations {
-      div {
+      & > div {
         display: grid;
         gap: 1em;
         margin-bottom: 3em;
@@ -101,10 +125,25 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1em;
+
+    @media screen and (min-width: 60em) {
+      & {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5em 10%;
+      }
+    }
 
     .nav-menu {
       @include nav-menu;
       flex-direction: column;
+
+      @media screen and (min-width: 60em) {
+        & > a {
+          width: 100%;
+        }
+      }
     }
 
     p {

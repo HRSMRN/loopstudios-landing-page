@@ -105,6 +105,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
 
   li {
     position: relative;
@@ -132,7 +135,7 @@ body {
 
 .creations-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1em;
   place-items: center;
 }
@@ -166,12 +169,34 @@ body {
   }
 
   .nav-links {
-    display: flex;
     column-gap: 1em;
+    flex-direction: row;
   }
 
   .creations-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  body {
+    font-size: font.$fs-100;
+  }
+  .fs-nav-menu {
+    font-size: font.$fs-100;
+  }
+  .fs-sub-heading {
+    font-size: font.$fs-300;
+  }
+  .fs-main-heading {
+    font-size: font.$fs-500;
+  }
+  .creations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .nav-links {
+    column-gap: 2em;
   }
 }
 

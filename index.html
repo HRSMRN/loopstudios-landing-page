@@ -48,11 +48,12 @@
     <div class="container">
       <div class="card">
         <div class="card--img">
-          <img src="assets/images/mobile/image-interactive.jpg" alt="" srcset="">
+          <img src="./assets/images/mobile/image-interactive.jpg" srcset="./assets/images/desktop/image-interactive.jpg"
+            style="background-size: contain;" alt="">
         </div>
 
         <div class="card--text">
-          <div>
+          <div class="bg-primary">
             <h2 class="text-center text-uppercase ff-secondary fs-sub-heading "> The Leader in Interactive VR</h2>
             <p class="text-center text-accent-100">
               Founded in 2011, Loopstudios has been producing world-class
@@ -72,14 +73,29 @@
         </div>
 
         <div class="creations-grid text-primary">
-          <img src="./assets/images/mobile/image-deep-earth.jpg" alt="">
-          <img src="./assets/images/mobile/image-night-arcade.jpg" alt="">
-          <img src="./assets/images/mobile/image-soccer-team.jpg" alt="">
-          <img src="./assets/images/mobile/image-grid.jpg" alt="">
-          <img src="./assets/images/mobile/image-from-above.jpg" alt="">
-          <img src="./assets/images/mobile/image-pocket-borealis.jpg" alt="">
-          <img src="./assets/images/mobile/image-curiosity.jpg" alt="">
-          <img src="./assets/images/mobile/image-fisheye.jpg" alt="">
+          <img src="./assets/images/mobile/image-deep-earth.jpg" srcset="./assets/images/desktop/image-deep-earth.jpg"
+            alt="">
+
+          <img src="./assets/images/mobile/image-night-arcade.jpg"
+            srcset="./assets/images/desktop/image-night-arcade.jpg" alt="">
+
+          <img src="./assets/images/mobile/image-soccer-team.jpg" srcset="
+          ./assets/images/desktop/image-soccer-team.jpg" alt="">
+
+          <img src="./assets/images/mobile/image-grid.jpg" srcset=" 
+          ./assets/images/desktop/image-grid.jpg" alt="">
+
+          <img src="./assets/images/mobile/image-from-above.jpg" srcset="
+          ./assets/images/desktop/image-from-above.jpg" alt="">
+
+          <img src="/assets/images/mobile/image-pocket-borealis.jpg "
+            srcset="./assets/images/desktop/image-pocket-borealis.jpg" alt="">
+
+          <img src="./assets/images/mobile/image-curiosity.jpg " srcset="./assets/images/desktop/image-curiosity.jpg"
+            alt="">
+
+          <img src="./assets/images/mobile/image-fisheye.jpg" srcset="
+          ./assets/images/desktop/image-fisheye.jpg" alt="">
         </div>
       </div>
     </div>
@@ -87,20 +103,18 @@
 
   <footer class="text-primary">
     <div class="container bg-secondary">
-      <div class="nav-menu">
 
-        <nav>
-          <a href=""><img src="assets/images/logo.svg" alt=""></a>
+      <nav class="nav-menu">
+        <a href=""><img src="assets/images/logo.svg" alt=""></a>
 
-          <ul role="list" class=" nav-links fs-nav-menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </nav>
-      </div>
+        <ul role="list" class=" nav-links fs-nav-menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
 
       <div>
         <ul class="social-links" role="list">
@@ -116,6 +130,7 @@
     </div>
   </footer>
 </body>
+
 <script>
   const icon = document.querySelector('.nav-menu-btn');
   const navMenu = document.querySelector('.nav-links-wrapper');
