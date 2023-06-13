@@ -86,10 +86,6 @@ main {
           display: grid;
           place-content: center;
         }
-
-        // @media screen and (min-width: 60em) {
-        //   place-content: initial;
-        // }
       }
 
       &--text {
@@ -98,9 +94,6 @@ main {
         }
 
         @media screen and (min-width: 60em) {
-          & {
-          }
-
           & h2 {
             margin-bottom: 0.5em;
           }
