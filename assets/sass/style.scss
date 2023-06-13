@@ -12,8 +12,8 @@ header {
 
     @media screen and (min-width: 60em) {
       background: url("../images/desktop/image-hero.jpg") no-repeat center;
-      height: 50vh;
       padding: 0 10%;
+      background-size: cover;
     }
   }
 
@@ -62,12 +62,12 @@ header {
     }
 
     @media screen and (min-width: 60em) {
-      max-width: 50%;
+      max-width: 40%;
     }
   }
 }
 
-.main-body {
+main {
   .container {
     padding: 0 1.5em;
     margin-bottom: $section-margin;
@@ -109,10 +109,61 @@ header {
     }
 
     .creations {
-      & > div {
-        display: grid;
-        gap: 1em;
-        margin-bottom: 3em;
+      display: grid;
+      gap: 1em;
+      margin-bottom: 3em;
+
+      &--grid {
+        img {
+          background: hsl(0, 0%, 22%, 0.5);
+        }
+        picture {
+          position: relative;
+
+          &::before {
+            white-space: pre;
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            z-index: 1;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.4;
+          }
+
+          &:nth-child(1)::before {
+            content: "Deep\A Earth";
+          }
+          &:nth-child(2)::before {
+            content: "Night\A Arcade";
+          }
+          &:nth-child(3)::before {
+            content: "Soccer\A Team";
+          }
+          &:nth-child(4)::before {
+            content: "The \A Grid";
+          }
+          &:nth-child(5)::before {
+            content: "From Up\A Above VR";
+          }
+          &:nth-child(6)::before {
+            content: "pocket\A borealis";
+          }
+          &:nth-child(7)::before {
+            content: "The\A curiosity";
+          }
+          &:nth-child(8)::before {
+            content: "Make it \A fisheye";
+          }
+        }
       }
     }
   }

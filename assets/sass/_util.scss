@@ -51,6 +51,12 @@ body {
   font-family: font.$ff-primary;
 }
 
+picture {
+  font-size: font.$fs-200;
+  font-family: font.$ff-secondary;
+  text-transform: uppercase;
+}
+
 .button {
   font-family: font.$ff-secondary;
   border: 2px solid color.$secondary;
@@ -133,9 +139,9 @@ body {
   }
 }
 
-.creations-grid {
+.creations--grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1em;
   place-items: center;
 }
@@ -173,8 +179,8 @@ body {
     flex-direction: row;
   }
 
-  .creations-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .creations--grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -190,9 +196,6 @@ body {
   }
   .fs-main-heading {
     font-size: font.$fs-500;
-  }
-  .creations-grid {
-    grid-template-columns: repeat(4, 1fr);
   }
 
   .nav-links {

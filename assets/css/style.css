@@ -123,8 +123,14 @@ a {
 }
 
 body {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Alata", sans-serif;
+}
+
+picture {
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
 }
 
 .button {
@@ -203,9 +209,9 @@ body {
   transform: scaleX(1);
 }
 
-.creations-grid {
+.creations--grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1em;
   place-items: center;
 }
@@ -235,8 +241,8 @@ body {
     column-gap: 1em;
     flex-direction: row;
   }
-  .creations-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .creations--grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 60em) {
@@ -251,9 +257,6 @@ body {
   }
   .fs-main-heading {
     font-size: 3rem;
-  }
-  .creations-grid {
-    grid-template-columns: repeat(4, 1fr);
   }
   .nav-links {
     column-gap: 2em;
@@ -305,8 +308,8 @@ header .container {
 @media screen and (min-width: 60em) {
   header .container {
     background: url("../images/desktop/image-hero.jpg") no-repeat center;
-    height: 50vh;
     padding: 0 10%;
+    background-size: cover;
   }
 }
 header .nav-menu {
@@ -353,43 +356,90 @@ header .main-heading {
 }
 @media screen and (min-width: 60em) {
   header .main-heading {
-    max-width: 50%;
+    max-width: 40%;
   }
 }
 
-.main-body .container {
+main .container {
   padding: 0 1.5em;
   margin-bottom: 5rem;
 }
 @media screen and (min-width: 60em) {
-  .main-body .container {
+  main .container {
     padding: 0 10%;
   }
 }
-.main-body .container .card {
+main .container .card {
   margin-bottom: 8em;
 }
-.main-body .container .card--img {
+main .container .card--img {
   margin-bottom: 3em;
 }
 @media screen and (min-width: 50em) {
-  .main-body .container .card--img {
+  main .container .card--img {
     display: grid;
     place-content: center;
   }
 }
-.main-body .container .card--text h2 {
+main .container .card--text h2 {
   margin-bottom: 2em;
 }
 @media screen and (min-width: 60em) {
-  .main-body .container .card--text h2 {
+  main .container .card--text h2 {
     margin-bottom: 0.5em;
   }
 }
-.main-body .container .creations > div {
+main .container .creations {
   display: grid;
   gap: 1em;
   margin-bottom: 3em;
+}
+main .container .creations--grid img {
+  background: hsla(0, 0%, 22%, 0.5);
+}
+main .container .creations--grid picture {
+  position: relative;
+}
+main .container .creations--grid picture::before {
+  white-space: pre;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  z-index: 1;
+}
+main .container .creations--grid picture::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+main .container .creations--grid picture:nth-child(1)::before {
+  content: "Deep\a Earth";
+}
+main .container .creations--grid picture:nth-child(2)::before {
+  content: "Night\a Arcade";
+}
+main .container .creations--grid picture:nth-child(3)::before {
+  content: "Soccer\aTeam";
+}
+main .container .creations--grid picture:nth-child(4)::before {
+  content: "The \aGrid";
+}
+main .container .creations--grid picture:nth-child(5)::before {
+  content: "From Up\a Above VR";
+}
+main .container .creations--grid picture:nth-child(6)::before {
+  content: "pocket\a borealis";
+}
+main .container .creations--grid picture:nth-child(7)::before {
+  content: "The\a curiosity";
+}
+main .container .creations--grid picture:nth-child(8)::before {
+  content: "Make it \a fisheye";
 }
 
 footer .container {
