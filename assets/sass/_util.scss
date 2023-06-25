@@ -152,9 +152,6 @@ picture {
 }
 
 @media (min-width: 50em) {
-  body {
-    font-size: font.$fs-200;
-  }
   .fs-nav-menu {
     font-size: font.$fs-100;
   }
@@ -185,19 +182,6 @@ picture {
 }
 
 @media (min-width: 60em) {
-  body {
-    font-size: font.$fs-100;
-  }
-  .fs-nav-menu {
-    font-size: font.$fs-100;
-  }
-  .fs-sub-heading {
-    font-size: font.$fs-300;
-  }
-  .fs-main-heading {
-    font-size: font.$fs-500;
-  }
-
   .nav-links {
     column-gap: 2em;
   }
